@@ -1,5 +1,0 @@
-﻿  Source.cpp
-C:\Users\Dom\Desktop\мама я програмист\П Н Б Б попытка в leetcode\Source.cpp(110,8): error C2015: слишком много знаков в константе
-C:\Users\Dom\Desktop\мама я програмист\П Н Б Б попытка в leetcode\Source.cpp(110,6): error C2065: df: необъявленный идентификатор
-C:\Users\Dom\Desktop\мама я програмист\П Н Б Б попытка в leetcode\Source.cpp(110,8): error C2143: синтаксическая ошибка: отсутствие ";" перед "константа"
-C:\Users\Dom\Desktop\мама я програмист\П Н Б Б попытка в leetcode\Source.cpp(111,1): error C2143: синтаксическая ошибка: отсутствие ";" перед "}"

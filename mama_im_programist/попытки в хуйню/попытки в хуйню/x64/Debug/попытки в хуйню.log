@@ -1,4 +1,0 @@
-﻿  Source.cpp
-C:\Users\Dom\Desktop\мама я програмист\попытки в хуйню\Source.cpp(40,14): warning C4305: инициализация: усечение из "int" в "short"
-C:\Users\Dom\Desktop\мама я програмист\попытки в хуйню\Source.cpp(40,16): warning C4309: инициализация: усечение константного значения
-  попытки в хуйню.vcxproj -> C:\Users\Dom\Desktop\мама я програмист\попытки в хуйню\x64\Debug\попытки в хуйню.exe
