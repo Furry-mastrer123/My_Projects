@@ -1,0 +1,8 @@
+Moskva Petersburg 10
+Moskva Nizhniy 80
+Kazan Nizhniy 90
+Metropolis Moskva 14
+Petersburg Moskva 11
+Nizhniy Krasnodar 17
+Nalchik Moskva 20
+Krimea Nizhniy 15

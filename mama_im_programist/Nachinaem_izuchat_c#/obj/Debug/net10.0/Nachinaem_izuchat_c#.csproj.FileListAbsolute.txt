@@ -1,0 +1,14 @@
+C:\Users\Dom\Desktop\mama_im_programist\Nachinaem_izuchat_c#\bin\Debug\net10.0\Nachinaem_izuchat_c#.exe
+C:\Users\Dom\Desktop\mama_im_programist\Nachinaem_izuchat_c#\bin\Debug\net10.0\Nachinaem_izuchat_c#.deps.json
+C:\Users\Dom\Desktop\mama_im_programist\Nachinaem_izuchat_c#\bin\Debug\net10.0\Nachinaem_izuchat_c#.runtimeconfig.json
+C:\Users\Dom\Desktop\mama_im_programist\Nachinaem_izuchat_c#\bin\Debug\net10.0\Nachinaem_izuchat_c#.dll
+C:\Users\Dom\Desktop\mama_im_programist\Nachinaem_izuchat_c#\bin\Debug\net10.0\Nachinaem_izuchat_c#.pdb
+C:\Users\Dom\Desktop\mama_im_programist\Nachinaem_izuchat_c#\obj\Debug\net10.0\Nachinaem_izuchat_c#.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dom\Desktop\mama_im_programist\Nachinaem_izuchat_c#\obj\Debug\net10.0\Nachinaem_izuchat_c#.AssemblyInfoInputs.cache
+C:\Users\Dom\Desktop\mama_im_programist\Nachinaem_izuchat_c#\obj\Debug\net10.0\Nachinaem_izuchat_c#.AssemblyInfo.cs
+C:\Users\Dom\Desktop\mama_im_programist\Nachinaem_izuchat_c#\obj\Debug\net10.0\Nachinaem_izuchat_c#.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Desktop\mama_im_programist\Nachinaem_izuchat_c#\obj\Debug\net10.0\Nachinaem_izuchat_c#.dll
+C:\Users\Dom\Desktop\mama_im_programist\Nachinaem_izuchat_c#\obj\Debug\net10.0\refint\Nachinaem_izuchat_c#.dll
+C:\Users\Dom\Desktop\mama_im_programist\Nachinaem_izuchat_c#\obj\Debug\net10.0\Nachinaem_izuchat_c#.pdb
+C:\Users\Dom\Desktop\mama_im_programist\Nachinaem_izuchat_c#\obj\Debug\net10.0\Nachinaem_izuchat_c#.genruntimeconfig.cache
+C:\Users\Dom\Desktop\mama_im_programist\Nachinaem_izuchat_c#\obj\Debug\net10.0\ref\Nachinaem_izuchat_c#.dll

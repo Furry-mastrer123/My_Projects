@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Dom\\Desktop\\\u043C\u0430\u043C\u0430 \u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0441\u0442\\\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435 \u043B\u0438\u0441\u0442\u0430 \u043E\u0442 \u0441\u0435\u0440\u0435\u044F Simple code\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F0BBF004-A619-43C7-9BD4-D1BF8B3A7A05}|\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435 \u043B\u0438\u0441\u0442\u0430 \u043E\u0442 \u0441\u0435\u0440\u0435\u044F Simple code.vcxproj|C:\\Users\\Dom\\Desktop\\\u043C\u0430\u043C\u0430 \u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0441\u0442\\\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435 \u043B\u0438\u0441\u0442\u0430 \u043E\u0442 \u0441\u0435\u0440\u0435\u044F Simple code\\Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{F0BBF004-A619-43C7-9BD4-D1BF8B3A7A05}|\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435 \u043B\u0438\u0441\u0442\u0430 \u043E\u0442 \u0441\u0435\u0440\u0435\u044F Simple code.vcxproj|solutionrelative:Source.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Source.cpp",
+              "DocumentMoniker": "C:\\Users\\Dom\\Desktop\\\u043C\u0430\u043C\u0430 \u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0441\u0442\\\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435 \u043B\u0438\u0441\u0442\u0430 \u043E\u0442 \u0441\u0435\u0440\u0435\u044F Simple code\\Source.cpp",
+              "RelativeDocumentMoniker": "Source.cpp",
+              "ToolTip": "C:\\Users\\Dom\\Desktop\\\u043C\u0430\u043C\u0430 \u044F \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u0438\u0441\u0442\\\u043E\u043F\u0438\u0441\u0430\u043D\u0438\u0435 \u043B\u0438\u0441\u0442\u0430 \u043E\u0442 \u0441\u0435\u0440\u0435\u044F Simple code\\Source.cpp",
+              "RelativeToolTip": "Source.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2026-02-25T17:04:18.668Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

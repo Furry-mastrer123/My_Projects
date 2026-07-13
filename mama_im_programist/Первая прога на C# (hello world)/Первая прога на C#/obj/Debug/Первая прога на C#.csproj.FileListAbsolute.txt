@@ -1,0 +1,7 @@
+C:\Users\Dom\Desktop\мама я програмист\poshel\Первая прога на C#\bin\Debug\Первая прога на C#.exe.config
+C:\Users\Dom\Desktop\мама я програмист\poshel\Первая прога на C#\bin\Debug\Первая прога на C#.exe
+C:\Users\Dom\Desktop\мама я програмист\poshel\Первая прога на C#\bin\Debug\Первая прога на C#.pdb
+C:\Users\Dom\Desktop\мама я програмист\poshel\Первая прога на C#\obj\Debug\Первая прога на C#.csproj.AssemblyReference.cache
+C:\Users\Dom\Desktop\мама я програмист\poshel\Первая прога на C#\obj\Debug\Первая прога на C#.csproj.CoreCompileInputs.cache
+C:\Users\Dom\Desktop\мама я програмист\poshel\Первая прога на C#\obj\Debug\Первая прога на C#.exe
+C:\Users\Dom\Desktop\мама я програмист\poshel\Первая прога на C#\obj\Debug\Первая прога на C#.pdb
