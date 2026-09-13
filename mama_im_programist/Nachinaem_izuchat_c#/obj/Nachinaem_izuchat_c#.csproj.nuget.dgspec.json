@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dom\\Desktop\\My_private_database\\mama_im_programist\\Nachinaem_izuchat_c#\\Nachinaem_izuchat_c#.csproj": {}
+    "C:\\Users\\Dom\\Desktop\\My_Projects\\mama_im_programist\\Nachinaem_izuchat_c#\\Nachinaem_izuchat_c#.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dom\\Desktop\\My_private_database\\mama_im_programist\\Nachinaem_izuchat_c#\\Nachinaem_izuchat_c#.csproj": {
+    "C:\\Users\\Dom\\Desktop\\My_Projects\\mama_im_programist\\Nachinaem_izuchat_c#\\Nachinaem_izuchat_c#.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dom\\Desktop\\My_private_database\\mama_im_programist\\Nachinaem_izuchat_c#\\Nachinaem_izuchat_c#.csproj",
+        "projectUniqueName": "C:\\Users\\Dom\\Desktop\\My_Projects\\mama_im_programist\\Nachinaem_izuchat_c#\\Nachinaem_izuchat_c#.csproj",
         "projectName": "Nachinaem_izuchat_c#",
-        "projectPath": "C:\\Users\\Dom\\Desktop\\My_private_database\\mama_im_programist\\Nachinaem_izuchat_c#\\Nachinaem_izuchat_c#.csproj",
+        "projectPath": "C:\\Users\\Dom\\Desktop\\My_Projects\\mama_im_programist\\Nachinaem_izuchat_c#\\Nachinaem_izuchat_c#.csproj",
         "packagesPath": "C:\\Users\\Dom\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dom\\Desktop\\My_private_database\\mama_im_programist\\Nachinaem_izuchat_c#\\obj\\",
+        "outputPath": "C:\\Users\\Dom\\Desktop\\My_Projects\\mama_im_programist\\Nachinaem_izuchat_c#\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

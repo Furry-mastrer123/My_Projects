@@ -77,7 +77,7 @@ int main()
 //	char* m{(char*)z};
 //	*m = 'k';
 //	cout<<  z <<endl <<  m;
-//	const char *Chararr[] = {"Hello", "World", "re"};				// char* он ругается ппц как истеричка без const
+//	const char *Chararr[] = {"Hello", "World", "re"};				// char* пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ const
 //#if k >100
 //	{
 //		cout << "sosat" << endl;
@@ -107,5 +107,5 @@ int main()
 	auto f = [a]() {int b = 10;
 	cout << b - a;
 		};
-	f();df'ljng '
+	f();
 }
