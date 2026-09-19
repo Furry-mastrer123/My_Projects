@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7B36B47A-4E71-45EB-9A8E-F3D460B92F8B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Первая_прога_на_C_</RootNamespace>
+    <RootNamespace>First_prog_c#</RootNamespace>
     <AssemblyName>Первая прога на C#</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
