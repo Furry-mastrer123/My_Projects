@@ -137,7 +137,7 @@ def update_slider(val):
     loc="center",
     cellLoc="center",
     rowLabels= ["f_j", "Interpol_j"]
-)
+                        )
 
 
     interpolaciya_plot.set_ydata(func_arr[n_tochek-4](np.linspace(a,b,100)))          
