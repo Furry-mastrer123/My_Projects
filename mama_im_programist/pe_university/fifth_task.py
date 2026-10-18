@@ -25,6 +25,14 @@ for y in range(11):
         k = -1 if z< 0.5 else 1
         y_znach_func[y].append(func_schet(x_prom[y][x])*(1+k*z/c))
 
+#raschet summ x^(i+j) dlya sostavleniy matrici A i vectorov C iz summ znacheniy x_i na znacheniye functsiy v etoy tochke
+#no tut she ne 11 polynomov nado, a tolko n chet tam, prochitay methodichku!
+x_summ_matrix = [[[]]]
+for x in range (11):
+    for x_array in range(len(x_prom[x])):
+        x_summ_matrix[x][x_array].append(
+            sum([pow(znach,x+x_array)] for znach in x_prom[x])
+        )
 
 #methodi
 
