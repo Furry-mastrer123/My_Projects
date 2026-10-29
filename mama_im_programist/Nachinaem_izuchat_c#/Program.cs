@@ -23,7 +23,7 @@ namespace Nachinaem_izuchat_c_
             string str = " ";
             str = Console.ReadLine();
             System.Console.WriteLine(str + " " + "!!!");
-            My.sum(a, b);23
+            My.sum(a, b);
         }
     }
 }
