@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt 
-import scipy as sc
 import sympy as sp
 import math
 
@@ -13,7 +12,7 @@ b = 0.8     #okrestnost
 n = int(input('Введите значение n - точность разложения по тейлору:' )) #glubina razlosheniya
 
 # poluchiniye ryada teylora
-taylor_ser = sp.series(f, x,a, n+1).removeO()   #removeО() убирает член из ряда 0(f(x)) -o eto O a ne nole
+taylor_ser = sp.series(f, x ,a , n+1).removeO()   #removeО() убирает член из ряда 0(f(x)) -o eto O a ne nole
 taylor_num = sp.lambdify(x, taylor_ser, 'numpy')  #preobrazovaniye v chislenuyu functsiyu ryada
 f_x = sp.lambdify(x, f,'numpy')      #preobrazovaniye v chislenuyu functsiyu ishodnuyu functsiyu
 

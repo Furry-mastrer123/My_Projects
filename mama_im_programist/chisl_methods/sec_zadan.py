@@ -17,7 +17,7 @@ b = 0.5                                 #pravaya granica
  
 
 #funcii math methodov
-def neuton_method (func, first_derivative, second_derivative, a, b, tochnost, maks_iteraciy, reseniye_computera, first_point = a):       #derivative - proizvodnaya, first point, esli hotim proverit v drugoy tochke
+def neuton_method (func, first_derivative, second_derivative, a,  tochnost, maks_iteraciy, reseniye_computera, first_point = a):       #derivative - proizvodnaya, first point, esli hotim proverit v drugoy tochke
     i = 0
     x_vals = list()
     y_vals = list()
@@ -87,8 +87,8 @@ def half_division_method(func, a, b, tochnost, maks_iteraciy):     # derivative 
 
 #reshaem yravneniya analiticheski
 x_1 = sc.nsolve(f, x, -1)
-x_2 = sc.nsolve(f, x, 0.4)
-x_3 = sc.nsolve(f, x, 0.5)
+x_2 = sc.nsolve(f, x, (0.3, 0.45))
+x_3 = sc.nsolve(f, x, (0.5, 1))
 print(x_1, x_2, x_3)
 
 
@@ -116,7 +116,7 @@ y_znac_func = func_znac(x_znach)
 #reshaem uravneniye s pomochiu chislennix methodov
 tochnost = 1e-9
 print(half_division_method(func_znac, a, 0, tochnost, 150))
-print(neuton_method(func_znac, first_derivative_znach, second_derivative_znach, a, 0, tochnost, 150, x_1))
+print(neuton_method(func_znac, first_derivative_znach, second_derivative_znach, a, tochnost, 150, x_1))
 
 axes[0,0].plot(
     x_znach,

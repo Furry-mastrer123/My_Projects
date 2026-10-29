@@ -21,27 +21,33 @@ def method_trap(func, a, b, n):        #f - functsia, a - levaya granica, b - pr
     while i!=n:
         summa =summa + func(a+h*i)
         i+=1
-    axes[0,1].bar(                 #risuem grafiki
-        x_vals,
-        y_vals,
-        width = h,
-        color = 'green'
-    )
-    axes[1,1].bar(                 #risuem grafiki
-            x_vals,
-            y_vals,
-            width = h,
-            color = 'green'
-        )
-    # axes[1,1].plot(               #Grafika pryam v vide trapeziy
+    # axes[0,1].bar(                 #risuem grafiki
+    #     x_vals,
+    #     y_vals,
+    #     width = h,
+    #     color = 'green'
+    # )
+    # axes[1,1].bar(                 #risuem grafiki
     #         x_vals,
     #         y_vals,
+    #         width = h,
     #         color = 'green'
     #     )
-    # axes[1, 1].fill(
-    #         x_vals,
-    #         y_vals
-    #     )
+    axes[1,1].plot(               #Grafika pryam v vide trapeziy
+             x_vals,
+             y_vals,
+             color = 'green'
+         )
+    axes[0,1].plot(               #Grafika pryam v vide trapeziy
+             x_vals,
+             y_vals,
+             color = 'green'
+         )
+    axes[1, 1].fill(
+              x_vals,
+              y_vals,
+              color = "green"
+          )
     return h*(summa)
 
 def method_simpson(func, a, b, n):
@@ -102,6 +108,14 @@ def plot_simpson(func, a, b, n):
             color="blue",
             linewidth=2
         )
+        # Рисуем параболу
+        axes[1, 1].plot(
+            x_part,
+            y_parabola,
+            color="blue",
+            linewidth=2
+        )
+        
 
 #tochki dlya isxodnoy functsii
 x_linscpace = np.linspace(a, b, 100)
@@ -136,7 +150,7 @@ axes[1,1].plot(
 #vichisleniye integralov
 res_meth_trap = method_trap(func, a, b, n)
 print(res_meth_trap)
-res_meth_simspsona = method_simpson(func, a, b, n)
+res_meth_simspsona = method_simpson(func, a, b, n)  
 print(res_meth_simspsona)
 plot_simpson(func, a, b, n)
 plt.show()
