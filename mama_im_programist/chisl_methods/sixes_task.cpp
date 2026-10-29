@@ -28,36 +28,41 @@ inline float determinant(float** matrix, int arr_num, int col_num)
 
     int max_diag_el = 0;
     for (int i = 0; i!= col_num; i++) {
-        if(fabs(matrix[i][0]) > fabs(matrix[i][max_diag_el])) max_diag_el = i;
+        if(fabs(matrix_b[i][0]) > fabs(matrix_b[max_diag_el][0])) max_diag_el = i;
     }
+
 
     if(max_diag_el != 0) 
     {
-        float* pivot = matrix[0];
-        matrix[0] = matrix[max_diag_el];
-        matrix[max_diag_el] = pivot; 
+        float* pivot = matrix_b[0];
+        matrix_b[0] = matrix_b[max_diag_el];
+        matrix_b[max_diag_el] = pivot; 
     }
 
-    float pivot_el = matrix[0][0];
+
+    float pivot_el = matrix_b[0][0];
     for(int i =0; i!= col_num; i++)
     {
-        matrix[0][i] = matrix[0][i]/pivot_el;
+        matrix_b[0][i] = matrix_b[0][i]/pivot_el;
     }
+
 
     for(int i = 1; i != arr_num; i++)
     {
-        float pivot_3 = matrix[i][0];
+        float pivot_3 = matrix_b[i][0];
         for(int j =0; j!= col_num; j++)
         {
-            matrix[i][j] = matrix[i][j] - matrix[0][j]*pivot_3;
+            matrix_b[i][j] = matrix_b[i][j] - matrix_b[0][j]*pivot_3;
         }
     }
+
 
     float **matrix_c = new float*[arr_num-1];
     for(int i =0; i!=arr_num-1; i++)
     {
         matrix_c[i] = new float[col_num-1]();
     }
+
 
     for(int i =1; i!= arr_num; i++)
     {
@@ -70,12 +75,13 @@ inline float determinant(float** matrix, int arr_num, int col_num)
 
     if(max_diag_el != 0)
     {
-        res = -matrix_b[0][0];
+        res = -pivot_el;
     }
     else
     {
         res = pivot_el;
     }
+
 
     res *= determinant(matrix_c, arr_num-1, col_num-1);
     
@@ -95,6 +101,7 @@ inline float determinant(float** matrix, int arr_num, int col_num)
 
     return res;
 }   
+
 
 inline float norma_calc(float* matrix[], int arr_num, int col_num)
 {
@@ -119,11 +126,119 @@ inline float norma_calc(float* matrix[], int arr_num, int col_num)
 }
 
 
-// inline float** multiplication (int arr_1[], int arr_1_arr_num, int arr_1_col_num, int arr_2[[]], int arr_2_arr_num, int arr_2_col_num)  //dodelat
-// {
-//     int *arr = new int[];
-//     return arr;
-// }
+inline float** method_jordan_gauss(float** matrix, int arr_num, int col_num)
+{
+    if(col_num == 0) 
+    {
+        cout << "error! there is no arrays and colomns in matrix!";
+        return nullptr;
+    }
+
+    float** matrix_b = new float*[col_num];
+    for(int i =0; i !=arr_num; i++)                 //kopiruem matricu i dopolnyaem sprava edinichnoy 
+    {
+        matrix_b[i] = new float[col_num+col_num]();
+        for(int j =0; j!= col_num+col_num; j++)
+        {
+            if(j>= col_num) matrix_b[i][j] = (j-col_num == i)? 1:0;
+            else matrix_b[i][j] = matrix[i][j];
+        }
+    }
+
+
+    for(int i = 0; i != arr_num-1; i++)               //privedeniye k verhnetreug vidu
+    {
+        int max_diag_el = i;
+        for(int t = i; t!= arr_num; t++)        //poisk max diad elementa
+        {
+            if(fabs(matrix_b[t][i]) > fabs(matrix_b[max_diag_el][i])) {max_diag_el = t;}
+        }
+
+        if(max_diag_el != i)            //menyaem stroki mestami
+        {
+            float* pivot = matrix_b[i];
+            matrix_b[i] = matrix_b[max_diag_el];
+            matrix_b[max_diag_el] = pivot;
+        }
+
+        float pivot_1 = matrix_b[i][i];
+
+        for(int j =0; j!= col_num*2; j++)         //privodim perbuyu stroku k a_11 = 1, a_12 = a_12/pivot ...
+        {   
+            matrix_b[i][j] = matrix_b[i][j]/pivot_1;
+        }
+
+        for(int j = i + 1; j!= arr_num; j++)
+        {
+            float pivot_2 = matrix_b[j][i];
+            for(int k =0; k != col_num*2; k++)
+            {
+                matrix_b[j][k] = matrix_b[j][k] - matrix_b[i][k]*pivot_2;
+            }
+        }
+    }   
+
+
+
+    for(int i = 1; i != arr_num; i++)               //privedeniye ishodnoy k edinichnoy matrice
+    {       
+        float pivot_1 = matrix_b[arr_num-i][arr_num-i];           //velichina a_nn
+        for(int j = arr_num-i; j != col_num*2; j++)                     //privedeniye k vidu a_nn = 1
+        {
+            matrix_b[arr_num-i][j] =matrix_b[arr_num-i][j]/pivot_1;
+        }
+
+
+        for(int j = 0; j != arr_num-i; j++)                       //udaleniye elementov nad privedennim
+        {
+            float pivot_2 = matrix_b[j][col_num-1];
+            for(int k = 0; k != 2*col_num; k++)
+            {
+                
+                matrix_b[j][k] = matrix_b[j][k] - matrix_b[arr_num-i][k]*pivot_2;
+            }
+        }
+    }
+
+
+    float** backward_matrix = new float*[arr_num]();        //sozdaniye backward
+    for(int i = 0; i != col_num; i++)
+    {
+        backward_matrix[i] = new float[col_num]();
+    }
+
+
+    for(int i = 0; i != arr_num; i++)       //zapolneniye backward
+    {
+        for(int j = 0; j != col_num; j++)
+        {
+            backward_matrix[i][j] = matrix_b[i][col_num+j];
+        }
+    }
+
+    for(int i = 0; i != arr_num; i++)
+    {
+        delete[] matrix_b[i];
+    }
+    delete[] matrix_b;
+
+
+    return backward_matrix;
+}
+
+
+inline float** multiplication (float** matrix_a, int mat_a_arr_num, 
+    int mat_a_col_num, float** matrix_b, int mat_b_arr_num, int mat_b_col_num)  //dodelat
+{
+    float** result = new float*[mat_a_arr_num];
+    for(int i = 0; i != mat_a_arr_num; i++)
+    {
+        result[i] = new float[mat_b_col_num]();
+    }
+        //dodelat
+
+
+}
 
 
 float** matrix(ifstream& fstr, int i_max = 6, int j_max = 6)           //6 po zadaniyu
@@ -161,12 +276,11 @@ float cond_number(float* matrix[], int arr_num_1, int colomn_num_1,
 }
 
 
-int main(int argc, char* argv)
+int main(int argc, char* argv[])
 {
     int n = 6;      //razmer
     ifstream read_file("six_task.txt");
-    float** Matrix_A = new float*[n];
-    Matrix_A = matrix(read_file, n, n);
+    float** Matrix_A = matrix(read_file, n, n);
     
     float det = determinant(Matrix_A, n, n);
     cout << det;
@@ -177,9 +291,7 @@ int main(int argc, char* argv)
     }
 
 
-
-    float** backward_matrix = new float*[n];
-    backward_matrix = method_jardan_gausse(Matrix_A);    
+    float** backward_matrix = method_jordan_gauss(Matrix_A, n, n);    
 
     
     float con_num = cond_number(Matrix_A, n, n, backward_matrix, n, n);
