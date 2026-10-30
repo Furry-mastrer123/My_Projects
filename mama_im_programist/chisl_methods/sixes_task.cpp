@@ -185,13 +185,13 @@ inline float** method_jordan_gauss(float** matrix, int arr_num, int col_num)
         float pivot_1 = matrix_b[arr_num-i][arr_num-i];           //velichina a_nn
         for(int j = arr_num-i; j != col_num*2; j++)                     //privedeniye k vidu a_nn = 1
         {
-            matrix_b[arr_num-i][j] =matrix_b[arr_num-i][j]/pivot_1;
+            matrix_b[arr_num-i][j] = matrix_b[arr_num-i][j]/pivot_1;
         }
 
 
         for(int j = 0; j != arr_num-i; j++)                       //udaleniye elementov nad privedennim
         {
-            float pivot_2 = matrix_b[j][col_num-1];
+            float pivot_2 = matrix_b[j][col_num-i];
             for(int k = 0; k != 2*col_num; k++)
             {
                 
@@ -230,14 +230,36 @@ inline float** method_jordan_gauss(float** matrix, int arr_num, int col_num)
 inline float** multiplication (float** matrix_a, int mat_a_arr_num, 
     int mat_a_col_num, float** matrix_b, int mat_b_arr_num, int mat_b_col_num)  //dodelat
 {
+    if(mat_a_col_num != mat_b_arr_num)
+    {
+        cerr << "error! matrixes are cannot be multiplicated!";
+        return nullptr;
+    }
+    
+
     float** result = new float*[mat_a_arr_num];
     for(int i = 0; i != mat_a_arr_num; i++)
     {
         result[i] = new float[mat_b_col_num]();
     }
-        //dodelat
+        
+
+    
+    for(int i = 0; i != mat_a_arr_num; i++)
+    {
+        for (int j = 0; j != mat_b_col_num; j++)
+        {
+                    float add_ij = 0;
+                    for(int k = 0; k != mat_a_col_num; k++)
+                        {
+                            add_ij += matrix_a[i][k]*matrix_b[k][j];
+                        }
+                    result[i][j] = add_ij;
+                }
+        }
 
 
+    return result;
 }
 
 
@@ -260,8 +282,22 @@ float** matrix(ifstream& fstr, int i_max = 6, int j_max = 6)           //6 po za
 }
 
 
-inline int write_in_file(ofstream& ofst, float* matri[], int i_size, int j_size)      //doselat
+inline int write_in_file(ofstream& ofst, float* matrix[], int i_size, int j_size)      //doselat
 {
+    if(!ofst.is_open()){cout << "error! couldnt write in file!";
+        return(1);
+    }
+
+    for(int i = 0; i != i_size; i ++)
+    {
+        for(int j = 0; j != j_size; j++)
+        {
+            ofst << matrix[i][j] << " ";
+        }
+        ofst << "\n";
+    }
+
+    cout << "matrix succesfully writen in file!";
     return 0;
 }
 
@@ -269,7 +305,6 @@ inline int write_in_file(ofstream& ofst, float* matri[], int i_size, int j_size)
 float cond_number(float* matrix[], int arr_num_1, int colomn_num_1,
      float* backward_matrix[], int arr_num_2, int colomn_num_2)       //chislo obuslov, dodelat
 {
-    int cond_num = 0;
     float norma_1 = norma_calc(matrix, arr_num_1, colomn_num_1);
     float norma_2 = norma_calc(backward_matrix, arr_num_2, colomn_num_2);
     return norma_1*norma_2;
@@ -279,11 +314,16 @@ float cond_number(float* matrix[], int arr_num_1, int colomn_num_1,
 int main(int argc, char* argv[])
 {
     int n = 6;      //razmer
-    ifstream read_file("six_task.txt");
+    ifstream read_file("six_task_matrix.txt");
+    if(!read_file.is_open())
+    {
+        cout<< "error! Couldnt read from file!";
+        return 0;
+    }
     float** Matrix_A = matrix(read_file, n, n);
     
     float det = determinant(Matrix_A, n, n);
-    cout << det;
+    cout << det << endl;
     if(det == 0)
     {
         cout << "opredelitel = o!";
@@ -298,7 +338,25 @@ int main(int argc, char* argv[])
     cout << con_num;
 
     ofstream write_backward_matrix("six_task_backward_mat.txt");
+    if(!write_backward_matrix.is_open())
+    {
+        cout << "error! filw is not open!";
+        return 0;
+    }
     ofstream write_multip_matrix("mat_multiplic.txt");
+    if(!write_multip_matrix.is_open())
+    {
+        cout<< "error! couldnt open file!";
+        return 0;
+    }
+
+
+    float** mult_res = multiplication(Matrix_A, n, n, backward_matrix, n, n);
+
+    write_in_file(write_backward_matrix, backward_matrix, n, n);
+    write_in_file(write_multip_matrix, mult_res, n, n);
+    int o;
+    cin >> o;
     return 0;
 }
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nachinaem_izuchat_c#")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51b38d901d554140cc2015fec4add04738196a5e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+59994d95d42f514c9dc2c53962241fe88f1e9c6e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nachinaem_izuchat_c#")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nachinaem_izuchat_c#")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -6,7 +6,7 @@ using namespace std;
 
 inline float func(int x, int y)
 {
-    return logf(x+y+1);
+    return logf(x+y+2);
 }
 
 int main(int argc, char* argv[])
@@ -25,6 +25,8 @@ int main(int argc, char* argv[])
             char space = ' ';
             write_in_file_matrix << space;
         }
+        char n = '\n';
+        write_in_file_matrix << n;
     }
 
     cout << "programm end";
